@@ -1,0 +1,38 @@
+.backgroundimg
+{
+  background: url(./images/light.png);
+background-size: cover;
+height: 100vh;
+
+}
+
+
+
+.backgroundDark
+{
+  background: url(./images/dark.png);
+  color: white;
+  background-size: cover;
+  height: 100vh;
+  
+}
+
+h1 {
+  font-family: 'Architects Daughter', cursive;
+}
+
+.container {
+  margin-top: 3.5cm;
+}
+
+.bt 
+{
+
+  position: absolute;
+  left: 6cm;
+}
+
+#bt 
+{
+    width: 5cm;
+}

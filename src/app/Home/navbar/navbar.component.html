@@ -1,0 +1,48 @@
+<nav [class]="navbarColor" class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Welcome</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" routerLink="Consulter">Consulter</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Connect
+            </a>
+            <ul [class]="dropdownColor" class="dropdown-menu bg-light" aria-labelledby="navbarDropdownMenuLink">
+
+              <li><button type="button" [class]="dropdownItemColor" class="btn btn-light" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                  Guest
+                </button></li>
+                <li></li>
+              <li><button type="button" [class]="dropdownItemColor" class="btn btn-light" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                  Employeur
+                </button></li>
+              <li><button type="button" [class]="dropdownItemColor" class="btn btn-light" style="width: 100%;" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                  Employee
+                </button></li>
+            </ul>
+          </li>
+          <li>
+            <div class="form-check form-switch">
+              <label for="DL" class="form-label" [style.color]="textColor">Light/Dark</label><input type="checkbox" class="form-check-input " role="switch" name="DL" id="DL" (change)="changeT($event)" (input)="ischecked($event)">
+              
+          </div>   
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <app-connect-a></app-connect-a>
+  <app-connect-b></app-connect-b>
+  

@@ -1,0 +1,27 @@
+.navbar-nav > li{
+    padding-left:10px;
+    padding-right:10px;
+  }
+  
+  .navbar-nav a{
+  text-decoration: none;
+  position: relative;
+  }
+  
+  .navbar-nav a:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 75%;
+  width: 0;
+  height: 3px;
+  background-color: #000;
+  transition: all 0.3s linear;
+  }
+  .navbar-nav a:hover:before{
+  width: 100%;
+  background-color: orange;
+  }
+
+ 
+ 

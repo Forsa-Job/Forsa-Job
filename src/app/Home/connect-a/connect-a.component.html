@@ -1,0 +1,101 @@
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content text-red" [style]="StyleColor">
+      <div class="modal-header ">
+        <h5 class="modal-title" id="exampleModalToggleLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-outline-info">Submit</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-info" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+          data-bs-dismiss="modal">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+  tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-red" style="color: 	#FF9966; background-color:#fff;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel2">Register</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+
+          <div class="mb-3">
+            <div class="input-group">
+              <div class="input-group-text">
+                <select name="listn" id="listn" (input)="value($event)">
+                  <option value="{{val.code}}" *ngFor="let val of list" [ngValue]="val">{{val.name}}</option>
+
+                </select> 
+              </div>
+              <input type="tel" class="form-control" id="exampleInputPhone" (input)="onupdate($event)">
+              <p>{{ver}}</p>
+            </div>
+
+          </div>
+
+
+          <div class="mb-3">
+            <label for="genre" class="form-label">genre</label>
+            <select class="form-select" id="genre" name="genre">
+              <option id="H">Homme</option>
+              <option id="F">Femme</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="Domaine" class="form-label">Domaine</label>
+            <select class="form-select" id="Domaine" name="Domaine">
+              <option id="E">Economic</option>
+              <option id="G">Gestion</option>
+              <option id="I">Informatique</option>
+            </select>
+          </div>
+
+
+
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-outline-info" (click)="verif($event)">Submit</button>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline-info" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+          data-bs-dismiss="modal">Back to first</button>
+      </div>
+    </div>
+  </div>
+</div>
