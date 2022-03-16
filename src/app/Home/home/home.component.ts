@@ -13,9 +13,9 @@ export class HomeComponent implements OnInit {
   {
     this.widhth=window.innerWidth;
   }
-  list = [" doudi", " mahdi"]
+  list = [" Welcome to Forsa JOB", " here u can find what u search for "]
   k = ""
-  vitesse = 300
+  vitesse = 200
   constructor(private sharedservice:SharedService) {
     this.action();
     this.clickEventSubscription=this.sharedservice.getClickEvent().subscribe(()=>
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
   }
 
   write(msg: String) {
-    this.k = "hello"
+    this.k = " "
     var i = 0
     setInterval(() => {
 
@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
   delete() {
     var i = this.k.length;
     setInterval(() => {
-      if (i >= 6) {
+      if (i >= 1) {
         this.k = this.k.slice(0, -1)
         i--;
       }
