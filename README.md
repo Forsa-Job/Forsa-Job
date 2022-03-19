@@ -1,27 +1,27 @@
-# Projet
+               Frorsa-Job
+I.	Introduction générale
+    Des millions de personnes s’engagent dans la recherche d’un emploi chaque année. Les personnes employées recherchent un nouvel emploi pour améliorer leurs conditions de travail. Les étudiants recherchent un emploi après avoir terminé leurs études. Les chômeurs cherchent un emploi après avoir été licenciés, La plupart des personnes recherchent un emploi plusieurs fois au cours de leur vie.
+    Dans ce cadre s’inscrit notre projet intitule « Forsa Job » qui permet de rendre la recherche plus facile et plus vaste vue que le chercheur peut trouver des offres du travail ou des demandes de travail dans le monde entier.
+  Dans ce projet on trouve des employés qui postent des demandes d'emploi et des employeurs qui postent des offres d'emploi et aussi on trouve le visiteur «  Guest »qui peut soit consulter soit signaler les postes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+II.	Explication de la première partie du travail :
+  C’est la première partie de notre travail (ce n’est pas la dernière vision nous pouvons faire plusieurs modifications)  
+Il s’agit des parties suivantes :
+  Page d’accueil :
+•	Navbar : 
+Switch : dark or light mode l’utilisateur a le droit de choisir le mode qu’il veut.
+« Connecte » : l’utilisateur peut se connecter en tant que employé employeur or Guest .
+     S’il connecte en tant que Guest il va accéder   directement 
+     S’il connecte en tant que employé ou employeur, une modale va être affiché (remarque on   utilise dans la modal un API pour vérifier les numéros de téléphones pour chaque pays ( format du numéro) et une autre api  pour récupérer tous les nom d’un pays avec leurs codes exemple Tunisie :+216 ) 
+•	Texte anime 
+•	Le bouton connecte :
+	S’il connecte en tant que Guest il va accéder   directement 
+	S’il connecte en tant que employé ou employeur, une modale va être affiché (remarque on   utilise dans la modal un API pour vérifier les numéros de téléphones pour chaque pays ( format du numéro) et une autre api  pour récupérer tous les nom d’un pays avec leurs codes exemple Tunisie :+216 ) 
+•	Image :  qui est le background du page d’accueil 
+ 
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
