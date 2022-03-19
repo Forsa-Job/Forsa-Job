@@ -7,18 +7,25 @@ I.	Introduction générale
 
 
 II.	Explication de la première partie du travail :
-  C’est la première partie de notre travail (ce n’est pas la dernière vision nous pouvons faire plusieurs modifications)  
+
+  C’est la première partie de notre travail (ce n’est pas la dernière vision nous pouvons faire plusieurs modifications)
+  
 Il s’agit des parties suivantes :
+
   Page d’accueil :
+  
 •	Navbar : 
 Switch : dark or light mode l’utilisateur a le droit de choisir le mode qu’il veut.
 « Connecte » : l’utilisateur peut se connecter en tant que employé employeur or Guest .
      S’il connecte en tant que Guest il va accéder   directement 
-     S’il connecte en tant que employé ou employeur, une modale va être affiché (remarque on   utilise dans la modal un API pour vérifier les numéros de téléphones pour chaque pays ( format du numéro) et une autre api  pour récupérer tous les nom d’un pays avec leurs codes exemple Tunisie :+216 ) 
+     S’il connecte en tant que employé ou employeur, une modale va être affiché (remarque on   utilise dans la modal un API pour vérifier les numéros de téléphones pour chaque pays ( format du numéro) et une autre api  pour récupérer tous les nom d’un pays avec leurs codes exemple Tunisie :+216 )
+     
 •	Texte anime 
+
 •	Le bouton connecte :
 	S’il connecte en tant que Guest il va accéder   directement 
 	S’il connecte en tant que employé ou employeur, une modale va être affiché (remarque on   utilise dans la modal un API pour vérifier les numéros de téléphones pour chaque pays ( format du numéro) et une autre api  pour récupérer tous les nom d’un pays avec leurs codes exemple Tunisie :+216 ) 
+
 •	Image :  qui est le background du page d’accueil 
  
 
