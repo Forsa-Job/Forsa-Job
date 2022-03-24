@@ -1,4 +1,4 @@
-               Frorsa-Job
+               Forsa-Job
 I.	Introduction générale
     Des millions de personnes s’engagent dans la recherche d’un emploi chaque année. Les personnes employées recherchent un nouvel emploi pour améliorer leurs conditions de travail. Les étudiants recherchent un emploi après avoir terminé leurs études. Les chômeurs cherchent un emploi après avoir été licenciés, La plupart des personnes recherchent un emploi plusieurs fois au cours de leur vie.
     Dans ce cadre s’inscrit notre projet intitule « Forsa Job » qui permet de rendre la recherche plus facile et plus vaste vue que le chercheur peut trouver des offres du travail ou des demandes de travail dans le monde entier.
