@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 export class ConnectAComponent implements OnInit {
 
   clickEventSubscription: Subscription;
-  StyleColor="color: 	#FF9966; background-color:#fff;";
+  StyleColor="color: #FF9966; background-color:#fff;";
   constructor(private sharedservice:SharedService) 
   { 
     
@@ -33,11 +33,11 @@ export class ConnectAComponent implements OnInit {
   change()
   {
     if(this.x%2==0)
-    {this.StyleColor="color: 	#FF9966; background-color:#fff;";
+    {this.StyleColor="color: #FF9966; background-color:#fff;";
     this.x=1;}
     else
     {this.x=2;
-    this.StyleColor="color: 	#FF9966; background-color:#000;";}
+    this.StyleColor="color: #FF9966; background-color:#000;";}
   }
   ngOnInit(): void {
   }

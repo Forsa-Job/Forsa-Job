@@ -1,3 +1,4 @@
+
 .navbar-nav > li{
     padding-left:10px;
     padding-right:10px;
@@ -22,6 +23,20 @@
   width: 100%;
   background-color: orange;
   }
-
- 
- 
+  .form-check
+  { 
+    position: relative;
+    top: 0.25cm;
+    right: 0.1cm;
+  }
+ #DL{position: relative;
+bottom: 0.75cm;
+left: 1cm;
+}
+.DLi{
+  text-align: center;
+}
+#item
+{
+  margin-left: 1cm;
+}

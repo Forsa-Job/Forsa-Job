@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,6 +13,9 @@ import { ConsulterComponent } from './Consulter/consulter/consulter.component';
 import { NavBarComponent } from './Consulter/nav-bar/nav-bar.component';
 import { FiltreComponent } from './Consulter/filtre/filtre.component';
 import { PostesComponent } from './Consulter/postes/postes.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SidenavComponent } from './Consulter/sidenav/sidenav.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,11 +27,15 @@ import { PostesComponent } from './Consulter/postes/postes.component';
     NavBarComponent,
     FiltreComponent,
     PostesComponent,
+    SidenavComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

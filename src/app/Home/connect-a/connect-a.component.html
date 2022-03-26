@@ -7,7 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form >
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -32,14 +32,14 @@
   </div>
 </div>
 <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-  tabindex="-1">
+  tabindex="-1" >
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-red" style="color: 	#FF9966; background-color:#fff;">
+    <div class="modal-content text-red" [style]="StyleColor">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalToggleLabel2">Register</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" >
         <form>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -94,7 +94,7 @@
 
       <div class="modal-footer">
         <button class="btn btn-outline-info" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
-          data-bs-dismiss="modal">Back to first</button>
+          data-bs-dismiss="modal">Connect</button>
       </div>
     </div>
   </div>

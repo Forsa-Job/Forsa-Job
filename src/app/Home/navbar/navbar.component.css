@@ -33,3 +33,14 @@
     top: 0.25cm;
     right: 0.1cm;
   }
+  #DL{position: relative;
+    bottom: 0.75cm;
+    left: 1cm;
+    }
+    .DLi{
+      text-align: center;
+    }
+    #item
+{
+  margin-left: 1cm;
+}

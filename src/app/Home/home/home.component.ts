@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
     this.widhth=window.innerWidth;
   }
   list = [" Welcome to Forsa JOB", " here u can find what u search for "]
-  k = ""
+  k = " "
   vitesse = 200
   constructor(private sharedservice:SharedService) {
     this.action();
@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
   }
 
   write(msg: String) {
-    this.k = " "
+    this.k = "->"
     var i = 0
     setInterval(() => {
 
@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
   delete() {
     var i = this.k.length;
     setInterval(() => {
-      if (i >= 1) {
+      if (i >= 3) {
         this.k = this.k.slice(0, -1)
         i--;
       }

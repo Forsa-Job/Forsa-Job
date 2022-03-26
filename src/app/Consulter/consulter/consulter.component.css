@@ -1,0 +1,34 @@
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+    z-index: -1;
+    
+  }
+  #reco{
+      height: 100vh;
+  }
+  #element
+  {
+    position: fixed;
+    
+    
+
+    
+  }
+  #open
+  {
+    
+    position: fixed;
+    z-index: 1;
+  }
+  #open
+  {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  #themes
+  {
+    transition: 0.5s;
+  }
+
+ 
