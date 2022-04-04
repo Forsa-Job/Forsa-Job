@@ -1,6 +1,6 @@
 <div id="postes"  (window:load)="getPoste($event)">
 
-  <div [class]="theme" id="card" style="max-width: 540px;" *ngFor="let p of postes">
+  <!-- <div [class]="theme" id="card" style="max-width: 540px;" *ngFor="let p of postes">
     <div class="row g-0">
       <div class="col-md-4">
         <img src="{{p.urlToImage}}" class="img-fluid rounded-start" alt="...">
@@ -10,6 +10,21 @@
           <h5 class="card-title" id="2" >{{p.author}}</h5>
           <p class="card-text" id="3">{{p.description}}</p>
           <p class="card-text" id="4"><small class="text-muted">{{p.publishedAt}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div [class]="theme" id="card" style="max-width: 540px;" *ngFor="let p of postes">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{p.urlToImage}}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body" id="1">
+          <h5 class="card-title" id="2" >{{p.id}}</h5>
+          <p class="card-text" id="3">{{p.prenom}}</p>
+          <p class="card-text" id="4"><small class="text-muted">{{p.email}}</small></p>
         </div>
       </div>
     </div>

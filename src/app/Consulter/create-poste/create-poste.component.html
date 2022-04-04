@@ -1,0 +1,55 @@
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+  tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel">Registre</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-6">
+            <label class="form-label" for="nom">nom</label><input type="text" name="nom" id="nom" class="form-control"
+              placeholder="Name">
+            <label class="form-label" for="email">email</label><input type="email" name="email" id="email"
+              class="form-control" placeholder="email">
+          </div>
+          <div class="col-6">
+            <label class="form-label" for="prenom">prenom</label><input type="text" name="prenom" id="prenom"
+              class="form-control" placeholder="Prenom">
+            <label class="form-label" for="Cemail">Confirm email</label><input type="email" name="Cemail" id="Cemail"
+              class="form-control" placeholder="Cemail">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label class="form-label" for="date_nessance">date_nessance</label><input type="date" name="date_nessance"
+              id="date_nessance" class="form-control" placeholder="date_nessance">
+          </div>
+          <div class="col-6">
+            <label class="form-label" for="description">description</label><input type="text" name="description"
+              id="description" class="form-control" placeholder="description">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <label class="form-label" for="age">age</label><input type="number" name="age"
+            id="age" class="form-control" placeholder="age">         
+           </div>
+           <div class="col-6">
+            <label class="form-label" for="adresse">adresse</label><input type="text" name="adresse"
+            id="adresse" class="form-control" placeholder="adresse">         
+           </div>
+        </div>
+        <div class="row">
+          <div class="col-3">
+
+          </div>
+          <div class="col-6">
+            <button type="button" class="btn btn-primary" id="addbtn"  (click)="create($event)">ADD</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

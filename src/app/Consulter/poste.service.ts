@@ -9,6 +9,6 @@ export class PosteService {
   constructor(private httpClient:HttpClient) { }
   getPoste():Observable<any>
   {
-    return this.httpClient.get('https://newsapi.org/v2/everything?q=apple&from=2022-03-23&to=2022-03-23&sortBy=popularity&apiKey=acb77a5591cf444088625dbb314d0014')
+    return this.httpClient.get('http://localhost/backend/PHP_REST/Api/Employee/Post/read.php')
   }
 }

@@ -4,14 +4,17 @@ import {Observable,Subject} from 'rxjs'
   providedIn: 'root'
 })
 export class SharedService {
-  private subject = new Subject<any>();
-  private sub = new Subject<any>();
-  private s = new Subject<any>();
-  private add = new Subject<any>();
+  
+  
+  
+  
+
+
+
+
+
+private subject = new Subject<any>();
 value:any
-val:any
-vadd:any
-vopen:any
 sendClickEvent()
 {
   this.subject.next(this.value);
@@ -22,6 +25,9 @@ getClickEvent():Observable<any>
 }
 
 
+      
+      private add = new Subject<any>();
+      vadd:any
       sendClickEventAdd()
       {
         this.add.next(this.vadd);
@@ -32,6 +38,9 @@ getClickEvent():Observable<any>
       }
 
 
+           
+            val:any
+            private sub = new Subject<any>();
             sendClickEventRefresh()
             {
               this.sub.next(this.val);
@@ -41,7 +50,9 @@ getClickEvent():Observable<any>
               return this.sub.asObservable();
             }
 
-
+                    
+                    private s = new Subject<any>();
+                    vopen:any
                     sendClickEventOpen()
                     {
                       this.s.next(this.vopen);
@@ -49,5 +60,17 @@ getClickEvent():Observable<any>
                     getClickEventOpen():Observable<any>
                     {
                       return this.s.asObservable();
+                    }
+
+
+                      private create = new Subject<any>();
+                      vCreate:any
+                      sendClickEventCreate()
+                      {
+                        return this.create.next(this.vCreate)
+                      }
+                      getClickEventCreate():Observable<any>
+                    {
+                      return this.create.asObservable();
                     }
 }

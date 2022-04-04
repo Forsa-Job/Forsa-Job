@@ -68,6 +68,27 @@
 
   
   
+  Dorsaf Hamedi
+input::placeholder{
+    color: rgb(7, 4, 1);
+  }
+  input:placeholder-shown {
+    border: 2px solid  darkorange;
   
+  }
+  input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px;
+    outline:darkorange;
+  }
+  :-webkit-input-placeholder {
+    /* Chrome, Safari, Opera */
+    color:darkorange;
+  }
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color:darkorange;
+  }
   
 

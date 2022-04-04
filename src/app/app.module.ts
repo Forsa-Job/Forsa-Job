@@ -15,6 +15,7 @@ import { FiltreComponent } from './Consulter/filtre/filtre.component';
 import { PostesComponent } from './Consulter/postes/postes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './Consulter/sidenav/sidenav.component';
+import { CreatePosteComponent } from './Consulter/create-poste/create-poste.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SidenavComponent } from './Consulter/sidenav/sidenav.component';
     FiltreComponent,
     PostesComponent,
     SidenavComponent,
+    CreatePosteComponent,
 
   ],
   imports: [
