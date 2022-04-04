@@ -33,7 +33,7 @@
 
     $data = json_decode(file_get_contents("php://input"));
 
-    $post->id = $data->id;
+    
     $post->nom = $data->nom;
     $post->prenom = $data->prenom;
     $post->age = $data->age;

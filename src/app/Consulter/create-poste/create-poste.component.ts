@@ -34,18 +34,21 @@ export class CreatePosteComponent implements OnInit {
     console.log(nom.value);
     
     var objet={
+      
       "nom":nom.value,
       "prenom":prenom.value,
       "age":age.value,
-      "date_nessance":date_nessance.value,
+      "date_nes":date_nessance.value,
       "email":email.value,
       "adresse":adresse.value,
 
     }
 
-    this.createPost.createPoste(objet).subscribe(res =>
+    this.createPost.createPoste(objet).subscribe((res) =>
       {
         var data=res
+        console.log("hiii there");
+        
         console.log(data)
         if (data.message=="Post Created")
         {
