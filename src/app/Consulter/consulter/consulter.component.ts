@@ -29,13 +29,11 @@ export class ConsulterComponent implements OnInit {
     {
     this.x=1;
     theme.style.backgroundColor="white"
-    
     }
     else
     {
       this.x=2;
       theme.style.backgroundColor="black"
-
     }
   }
   add(event:Event)

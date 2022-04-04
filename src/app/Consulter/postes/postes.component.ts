@@ -43,13 +43,13 @@ export class PostesComponent implements OnInit {
   }
 
   x = 1
-  theme = "card bg-light mb-3"
+  theme = "card bg-primary mb-3"
   changeTheme() {
     var theme = < HTMLDivElement > document.getElementById("card")
 
     if (this.x % 2 == 0) {
       this.x = 1;
-      this.theme = "card bg-light mb-3"
+      this.theme = "card bg-primary mb-3"
 
     } else {
       this.x = 2;
@@ -57,11 +57,11 @@ export class PostesComponent implements OnInit {
 
     }
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {this.getposte()}
   getPoste(event: Event) {
-    this.posteService.getPoste().subscribe(res => {
-      this.postes=res.articles;
-    })
+    // this.posteService.getPoste().subscribe(res => {
+    //   this.postes=res.articles;
+    // })
     // fetch("/assets/postes.json").then((res) => {
     //   var data = res.json().then((data) => {
     //     this.postes = data
@@ -70,7 +70,9 @@ export class PostesComponent implements OnInit {
     // }).catch(() => {
     //   alert("error")
     // })
-
+    this.posteService.getPoste().subscribe(res => {
+      this.postes = res.data;
+      console.log(this.postes);})
 
   }
   getposte() {
