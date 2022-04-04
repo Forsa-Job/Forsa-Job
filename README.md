@@ -28,6 +28,33 @@ Switch : dark or light mode l’utilisateur a le droit de choisir le mode qu’i
 
 •	Image :  qui est le background du page d’accueil 
  
+III.	Explication de la deuxième partie du travail :
+
+•	Nous avons fait quelques modifications de design par exemple au lieu de mettre « Switch : dark or light mode l’utilisateur a le droit de choisir le mode qu’il veut.
+
+» dans le navbar nous avons mis « option » :  lorsque vous cliquer vous trouver le switch dark or light mode 
+
+•	De plus nous avons ajouter la 2 -ème page « consulter » ce n’est pas l’état final de cette page et le contenu des postes (comme indique la maquette) n’est pas comme ces postes mais nous n’avons pas créer une base de donné donc nous avons utilisé une api pour les postes avec la méthode que nous avons utilisé en classe .
+
+•	On trouve deux boutons add et delete qui nous permet d’ajouter une poste ou de la supprimer de plus a cote on trouve le bouton avec le symbole actualiser qui nous permet d’afficher plusieurs postes en actualisant la page.
+
+•	A gauche au-dessus, on trouve une flèche qui affiche les éléments qui nous permet de filtrer le contenu (les postes) :
+
+	Bouton chercher
+
+	Lieu de travail
+
+	Date de publication
+
+	Secteur de travail
+
+	Niveau de l’employée
+
+	Type de travail
+
+	Temps de travail
+
+	Dans chacune de ces éléments on trouve un ensemble de radio ou checkbox
 
 
 
