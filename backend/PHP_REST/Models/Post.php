@@ -19,7 +19,7 @@
 
         public function read()
         {
-            $query = 'SELECT id,nom,prenom,age FROM ' . $this->table ;
+            $query = 'SELECT id,nom,prenom,age,date_nes,email,adresse FROM ' . $this->table ;
 
             $stmt = $this->conn->prepare($query);
 

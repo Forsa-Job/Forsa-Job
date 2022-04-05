@@ -44,7 +44,11 @@
                 'id' => $id,
                 'nom' => $nom,
                 'prenom' => $prenom,
-                'age' => $age
+                'age' => $age,
+                'date_nes' => $date_nes,
+                'email' => $email,
+                'adresse' => $adresse,
+                
             );
 
             array_push($employees_arr['data'],$employee_item);
