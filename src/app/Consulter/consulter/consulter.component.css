@@ -39,4 +39,7 @@
   {
     transition: 0.5s;
   }
-
+*{
+  scroll-behavior: smooth;
+  
+}

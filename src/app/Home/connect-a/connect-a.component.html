@@ -52,14 +52,16 @@
           </div>
 
           <div class="mb-3">
+            <label for="exampleInputPhone">tel:</label>
             <div class="input-group">
               <div class="input-group-text">
+                
                 <select name="listn" id="listn" (input)="value($event)">
                   <option value="{{val.code}}" *ngFor="let val of list" [ngValue]="val">{{val.name}}</option>
 
                 </select> 
               </div>
-              <input type="tel" class="form-control" id="exampleInputPhone" (input)="onupdate($event)">
+              <input type="tel" class="form-control" id="exampleInputPhone" name="exampleInputPhone" (input)="onupdate($event)">
               <p>{{ver}}</p>
             </div>
 

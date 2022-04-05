@@ -43,13 +43,13 @@ export class PostesComponent implements OnInit {
   }
 
   x = 1
-  theme = "card bg-primary mb-3"
+  theme = "card bg-info mb-3"
   changeTheme() {
     var theme = < HTMLDivElement > document.getElementById("card")
 
     if (this.x % 2 == 0) {
       this.x = 1;
-      this.theme = "card bg-primary mb-3"
+      this.theme = "card bg-info mb-3"
 
     } else {
       this.x = 2;

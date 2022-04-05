@@ -33,9 +33,7 @@
 
     $data = json_decode(file_get_contents("php://input"));
 
-    
     $post->nom = $data->nom;
-    $post->prenom = $data->prenom;
     $post->age = $data->age;
     $post->date_nes = $data->date_nes;
     $post->email = $data->email;
