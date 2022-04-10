@@ -2,6 +2,9 @@
     transition: margin-left .5s;
     padding: 20px;
     z-index: -1;
+    background-color: rgb(249, 244, 244);
+    background-repeat: no-repeat;
+    background-size: cover;
     
   }
   #reco{
@@ -38,6 +41,7 @@
   #themes
   {
     transition: 0.5s;
+   
   }
 *{
   scroll-behavior: smooth;

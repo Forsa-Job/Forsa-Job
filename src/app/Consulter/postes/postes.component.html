@@ -15,7 +15,7 @@
     </div>
   </div> -->
 
-  <div [class]="theme" id="card" style="max-width: 540px;" *ngFor="let p of postes">
+  <div [class]="theme" id="card" style="max-width: 540px; " *ngFor="let p of postes">
     <div class="row g-0">
       <div class="col-md-4">
         <img src="https://img-19.commentcamarche.net/WNCe54PoGxObY8PCXUxMGQ0Gwss=/480x270/smart/d8c10e7fd21a485c909a5b4c5d99e611/ccmcms-commentcamarche/20456790.jpg" class="img-fluid rounded-start" alt="...">
@@ -23,12 +23,12 @@
       <div class="col-md-8">
         <div class="card-body" id="1">
           <h5 class="card-title" id="2" >id : {{p.id}}</h5>
-          <p class="card-text" id="3">nom : {{p.nom}}</p>
-          <p class="card-text" id="3">prenom : {{p.prenom}}</p>
-          <p class="card-text" id="4">email : {{p.email}}</p>
-          <p class="card-text" id="4">adresse: {{p.adresse}}</p>
-          <p class="card-text" id="4">age : {{p.age}}</p>
-          <p class="card-text" id="3">date_nessance : {{p.date_nes}}</p>
+          <p class="card-text" id="3">nom : {{p.nom}} |
+         prenom : {{p.prenom}} |
+          email : {{p.email}} |
+          adresse: {{p.adresse}} |
+          age : {{p.age}} |
+          date_nessance : {{p.date_nes}}</p>
         </div>
         <div class="card-footer">
           <div class="row">

@@ -3,10 +3,10 @@
     width: 400px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 0; /* Stay on top */
-    top: 1.5cm; /* Stay at the top */
+    top: 1.45cm; /* Stay at the top */
     left: 0;
     
-    background-color: white; /* Black*/
+    background-color: rgb(249, 244, 244); /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -16,7 +16,7 @@
     width: 400px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 0; /* Stay on top */
-    top: 1.5cm; /* Stay at the top */
+    top: 1.45cm; /* Stay at the top */
     left: 0;
     
     background-color: black; /* Black*/

@@ -25,15 +25,18 @@ export class ConsulterComponent implements OnInit {
   
   changeTheme()
   { var theme=<HTMLDivElement> document.getElementById("themes")
+  var main=<HTMLDivElement> document.getElementById("main")
     if(this.x%2==0)
     {
     this.x=1;
-    theme.style.backgroundColor="white"
+    
+    main.style.backgroundColor="rgb(249, 244, 244)"
     }
     else
     {
       this.x=2;
-      theme.style.backgroundColor="black"
+      
+      main.style.backgroundColor="black"
     }
   }
   add(event:Event)

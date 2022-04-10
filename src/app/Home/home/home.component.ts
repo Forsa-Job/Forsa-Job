@@ -13,9 +13,7 @@ export class HomeComponent implements OnInit {
   {
     this.widhth=window.innerWidth;
   }
-  list = [" Welcome to Forsa JOB", " here u can find what u search for "]
-  k = " "
-  vitesse = 200
+  
   constructor(private sharedservice:SharedService) {
     this.action();
     this.clickEventSubscription=this.sharedservice.getClickEvent().subscribe(()=>
@@ -37,6 +35,9 @@ export class HomeComponent implements OnInit {
     this.text="backgroundDark";}
   }
 
+  list = [" Welcome to Forsa JOB", " here u can find what u search for "]
+  k = " "
+  vitesse = 200
   write(msg: String) {
     this.k = "->"
     var i = 0
