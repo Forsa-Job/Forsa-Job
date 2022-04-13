@@ -1,0 +1,25 @@
+.bt1 {
+    margin-left: 2.3cm;
+  }
+
+.bt2 {
+    padding-right: 9cm;
+  }
+
+#picbtn
+{
+    border-radius: 50%;
+    
+    width: fit-content;
+    height: fit-content;
+    box-shadow: none;
+    background: none;
+    
+}
+img{
+    
+}
+#filebtn
+{
+    display: none;
+}

@@ -16,6 +16,9 @@ import { PostesComponent } from './Consulter/postes/postes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './Consulter/sidenav/sidenav.component';
 import { CreatePosteComponent } from './Consulter/create-poste/create-poste.component';
+import { ProfilComponent } from './profil/profil.component';
+import { MesPostesComponent } from './mes-postes/mes-postes.component';
+import { FavorisComponent } from './favoris/favoris.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { CreatePosteComponent } from './Consulter/create-poste/create-poste.comp
     PostesComponent,
     SidenavComponent,
     CreatePosteComponent,
+    ProfilComponent,
+    MesPostesComponent,
+    FavorisComponent,
 
   ],
   imports: [
