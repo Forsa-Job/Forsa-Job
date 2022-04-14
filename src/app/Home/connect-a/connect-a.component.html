@@ -21,10 +21,10 @@
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Check me out</label>
           </div>
-          <button type="submit" class="btn btn-outline-info">Submit</button>
+          <button type="submit" class="btn btn-outline-info" (click)="compte($event)">Submit</button>
         </form>
       </div>
-      <p id="compte"></p>
+      <p id="compte">{{check}}</p>
       <div class="modal-footer">
         <button class="btn btn-outline-info" routerLink="/Register"
           data-bs-dismiss="modal">Register</button>

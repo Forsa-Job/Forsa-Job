@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from '../shared.service';
 import { Subscription } from 'rxjs';
+import { CheckCompteService } from './service/check-compte.service';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 
 @Component({
@@ -12,7 +14,7 @@ export class ConnectAComponent implements OnInit {
 
   clickEventSubscription: Subscription;
   StyleColor="color: #FF9966; background-color:#fff;";
-  constructor(private sharedservice:SharedService) 
+  constructor(private sharedservice:SharedService,private checkCompte:CheckCompteService) 
   { 
     
     this.listn()
@@ -87,11 +89,32 @@ export class ConnectAComponent implements OnInit {
 
     })
   }
-
+  check=""
   compte(event:Event)
   {
+
     var email=<HTMLInputElement>document.getElementById("exampleInputEmail1")
     var password=<HTMLInputElement>document.getElementById("exampleInputPassword1")
+
+    this.checkCompte.check(email.value,password.value).subscribe(res => {
+      
+      this.check=res.message
+      console.log(this.check);
+
+      if(res.message=='Found')
+      {
+        open('http://localhost:4200/Consulter')
+        localStorage.setItem('username',res.username)
+        close()
+       
+      }
+      
+
+    })
+    
+
+
+    
   }
 
 }

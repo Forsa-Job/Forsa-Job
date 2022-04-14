@@ -40,5 +40,11 @@ export class NavBarComponent implements OnInit {
       this.dropdownItemColor="btn btn-light"
     }
   }
+  deconnecter(event:Event)
+  {
+    localStorage.removeItem('username')
+    open('http://localhost:4200/')
+    close()
+  }
 
 }

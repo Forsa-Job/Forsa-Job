@@ -35,6 +35,71 @@
             return $stmt;
         }
 
+        public function read_single()
+        {
+            $query = 'SELECT username,nom,prenom,email,password,date_naissance,sexe,pays,adresse,code_postal,tel_mobile,tel_fixe FROM compte WHERE email=:email and password=:password;';
+            
+            $stmt = $this->conn->prepare($query);
+
+            $stmt->bindParam(':email', $this->email);
+            $stmt->bindParam(':password', $this->password);
+
+            $stmt->execute();
+
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            if($stmt->rowCount()>0)
+            {
+                $this->username = $row['username'];
+                $this->nom = $row['nom'];
+                $this->prenom = $row['prenom'];
+                $this->email = $row['email'];
+                $this->password = $row['password'];
+                $this->date_naissance = $row['date_naissance'];
+                $this->sexe = $row['sexe'];
+                $this->pays = $row['pays'];
+                $this->adresse = $row['adresse'];
+                $this->code_postal = $row['code_postal'];
+                $this->tel_mobile = $row['tel_mobile'];
+                $this->tel_fixe = $row['tel_fixe'];
+            }
+        
+
+            return $stmt;
+            
+        }
+        public function read_single_profil()
+        {
+            $query = 'SELECT username,nom,prenom,email,password,date_naissance,sexe,pays,adresse,code_postal,tel_mobile,tel_fixe FROM compte WHERE username=:username;';
+            
+            $stmt = $this->conn->prepare($query);
+
+            $stmt->bindParam(':username', $this->username);
+            
+
+            $stmt->execute();
+
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            if($stmt->rowCount()>0)
+            {
+                $this->username = $row['username'];
+                $this->nom = $row['nom'];
+                $this->prenom = $row['prenom'];
+                $this->email = $row['email'];
+                $this->password = $row['password'];
+                $this->date_naissance = $row['date_naissance'];
+                $this->sexe = $row['sexe'];
+                $this->pays = $row['pays'];
+                $this->adresse = $row['adresse'];
+                $this->code_postal = $row['code_postal'];
+                $this->tel_mobile = $row['tel_mobile'];
+                $this->tel_fixe = $row['tel_fixe'];
+            }
+        
+
+            return $stmt;
+            
+        }
+
         public function create()
         {
             $query = 'INSERT INTO ' . $this->Table_compte . 
