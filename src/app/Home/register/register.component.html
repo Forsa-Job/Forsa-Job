@@ -1,0 +1,233 @@
+<app-navbar></app-navbar>
+<div id="d1" class="theme">
+
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="form-check form-switch">
+          <input class="form-check-input" style="color: #ff8c00 " style="border-color:#ff8c00" type="checkbox" role="switch" id="s1"
+            (change)="fchange($event)">
+          <label class="form-check-label" style="color: darkorange;" for="flexSwitchCheckDefault">mode</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="form-floating">
+            <input style="color:  #ff8c00;" type="text" class="form-control" (keyup)="verifnom($event)" id="nom"
+              placeholder="name@example.com" required>
+            <label for="floatingInput">Nom*</label>
+            <p id="p3" style="color:  darkorange;">valide</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="form-floating">
+            <input style="color:  darkorange;" type="text" id="prenom" (keyup)="verifprenom($event)" class="form-control"
+              aria-describedby="passwordHelpBlock" placeholder="password" required>
+            <label for="floatingPassword">Prenom*</label>
+            <p id="p4" style="color:  darkorange;">valide</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="form-floating ">
+            <input style="color:  darkorange;" type="email" class="form-control" (keyup)="email($event)" id="email"
+              placeholder="name@example.com" required>
+            <label for="floatingInput"> Email *</label>
+            <p id="p10" style="color:  darkorange;">valide</p>
+  
+          </div>
+  
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="form-floating">
+            <div class="form-floating ">
+              <input style="color:  darkorange;" type="email" (keyup)="verifCemail($event)" class="form-control"
+                id="cemail" placeholder="name@example.com" required>
+              <label for="floatingInput">Confirmer Email *</label>
+              <p id="p1" style="color:  darkorange;">valide</p>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="form-floating">
+            <input style="color:  darkorange;" type="password" id="password" (keyup)="verifpass($event)"
+              class="form-control" aria-describedby="passwordHelpBlock" placeholder="password" required>
+            <label for="floatingPassword">mot de passe*( lettres et chiffres uniquement)</label>
+            <p style="color: darkorange" id="p9">valide</p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="form-floating">
+            <input style="color:  darkorange;" type="password" id="cpassword" (keyup)="verifcpass($event)"
+              class="form-control" aria-describedby="passwordHelpBlock" placeholder="password" required>
+            <label for="floatingPassword">Confirmer mot de passe*</label>
+            <p style="color: darkorange" id="p2">valide</p>
+          </div>
+        </div>
+      </div>
+      
+  
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="row">
+  
+            <div class="col-8">
+              <div class="form-floating ">
+                <input style="color:  darkorange ;" type="text" class="form-control" id="floatingInput" placeholder="ad"
+                  required>
+                <label for="floatingInput">addresse*</label>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="form-floating">
+                <input style="color:  darkorange;" type="text" class="form-control" id="codepostale"
+                  (keyup)="verifcode($event)" placeholder="ad" required>
+                <label for="floatingInput">code postale*</label>
+                <p id="p7" style="color:  darkorange;">valide</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="form-floating ">
+            <select class="form-select" class="  text-center" style="height: 1.5cm;width: 14.5cm;" id="inputGroupSelect01">
+              <option selected disabled> pays</option>
+           
+            
+              <option *ngFor="let country of codes" >{{country.name}}</option>
+            
+            </select>
+          </div>
+        </div>
+       
+      
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="row">
+            <div class="input-group" style="height: 1.5cm;width: 16.5cm;">
+              <label class="input-group-text col-3" for="inputGroupSelect01">telephone mobile</label>
+  
+              <select class="form-select" class="col-2 text-center" style="width:1.95cm" id="inputGroupSelect01">
+                <option selected disabled> code</option>
+                <option *ngFor="let code of codes">{{code.phone}}</option>
+              </select>
+              <input id="tel1" name="tel" type="tel" class="form-control" (keyup)="veriftel1($event)">
+            </div>
+            <div class="row">
+  
+              <p id="p8" style="color:  darkorange;">valide</p>
+            </div>
+  
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="row">
+            <div class="input-group "style="height: 1.5cm;width: 16cm;">
+              <label class="input-group-text col-3" for="inputGroupSelect02">telephone fixe</label>
+              <select class="form-select" class="col-2 text-center" style="width:1.95cm" id="inputGroupSelect02">
+                <option selected disabled>code</option>
+                <option *ngFor="let code of codes">{{code.phone}}</option>
+              </select>
+              <input id="tel" name="tel" type="tel" (keyup)="veriftel2($event)" class="form-control">
+            </div>
+            <div class="row">
+              <p id="p5" style="color:  darkorange;">valide</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+  
+          <select id="inputState" class="form-select">
+            <option selected disabled>Sexe*</option>
+            <option>Femme</option>
+            <option>Homme</option>
+          </select>
+        </div>
+  
+        <div class="col-lg-6 col-md-6 col-sm-12">
+  
+          <select id="inputState" class="form-select">
+            <option selected disabled>Etat civil*</option>
+            <option>Célibataire</option>
+            <option>Marié(e)</option>
+            <option>Divorcé(e)</option>
+          </select>
+        </div>
+      </div><br><br>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="form-floating ">
+            <input style="color:  darkorange;" type="date" class="form-control" id="floatingInput" placeholder="dn"
+              required>
+            <label for="floatingInput">Date de naissance*</label>
+          </div>
+        </div>
+        <br><br><br>
+       
+          
+          <div class="col-lg-6 col-md-6 col-sm-12" >
+            <select id="inputState" class="form-select"style="height: 1.5cm;width: 14cm;">
+              <option selected disabled>Niveau d'etude*</option>
+              <option>Bac</option>
+              <option>Licence</option>
+              <option>Master</option>
+              <option>Ingenieurie</option>
+              <option>Doctorat</option>
+              <option>CAP</option>
+              <option>BTS</option>
+              <option>BTP</option>
+              <option>Autre</option>
+            </select>
+          </div>
+         
+       
+        
+      </div>
+      
+  
+  
+      <br> <br> <br>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="form-floating">
+            <input style="color:  darkorange;" type="text" id="floatingspecialite" class="form-control"
+              aria-describedby="passwordHelpBlock" placeholder="s" required>
+            <label for="floatingPassword">Specialité*</label>
+  
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="form-floating">
+            <input style="color:  darkorange;" type="text" id="floatingetab" class="form-control"
+              aria-describedby="passwordHelpBlock" placeholder="s" required>
+            <label for="floatingPassword">Etablissement*</label>
+  
+          </div>
+        </div>
+      </div>
+     
+    <br>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="form-check">
+  
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault">
+           J'accepte les termes et les conditions
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-outline-warning" type="button" href="#exampleModal">Valider</button>
+      <button class="btn btn-outline-warning" type="button">Annuler</button>
+    </div>
+  </div>

@@ -27,16 +27,16 @@
   {
     position: fixed;
   }
-  #open
+  #filtre
   {
     
     position: fixed;
-    z-index: 1;
+    
   }
   #open
   {
     transition: margin-left .5s;
-    padding: 20px;
+    
   }
   #themes
   {

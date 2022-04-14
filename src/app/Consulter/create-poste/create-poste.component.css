@@ -1,0 +1,15 @@
+#picbtn
+{
+    border-radius: 50%;
+    
+    width: fit-content;
+    height: fit-content;
+    box-shadow: none;
+    background: none;
+    
+}
+
+#filebtn
+{
+    display: none;
+}

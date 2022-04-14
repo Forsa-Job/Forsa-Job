@@ -61,4 +61,10 @@ export class CreatePosteComponent implements OnInit {
       })
     
   }
+
+  changePic(event:Event)
+  {
+    var filebtn=<HTMLButtonElement>document.getElementById("filebtn");
+    filebtn.click()
+  }
 }

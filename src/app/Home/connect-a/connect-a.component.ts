@@ -88,4 +88,10 @@ export class ConnectAComponent implements OnInit {
     })
   }
 
+  compte(event:Event)
+  {
+    var email=<HTMLInputElement>document.getElementById("exampleInputEmail1")
+    var password=<HTMLInputElement>document.getElementById("exampleInputPassword1")
+  }
+
 }

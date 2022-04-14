@@ -19,6 +19,8 @@ import { CreatePosteComponent } from './Consulter/create-poste/create-poste.comp
 import { ProfilComponent } from './profil/profil.component';
 import { MesPostesComponent } from './mes-postes/mes-postes.component';
 import { FavorisComponent } from './favoris/favoris.component';
+import { RegisterComponent } from './Home/register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { FavorisComponent } from './favoris/favoris.component';
     ProfilComponent,
     MesPostesComponent,
     FavorisComponent,
+    RegisterComponent,
+
 
   ],
   imports: [

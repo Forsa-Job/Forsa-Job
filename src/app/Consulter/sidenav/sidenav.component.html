@@ -2,274 +2,182 @@
 
 
   <div>
-
-
-    <div >
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" style="border-color: orange;" Search aria-label="Search">
-        <button class="btn btn-outline-warning" type="submit">Search</button>
-      </form>
-      <br>
-
-      <div>
-        <button type="button" class="btn btn-outline-warning" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">lieu de travail </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">tunisie</a>
-          <a class="dropdown-item" href="#">france</a>
-
-        </div>
+    <div class="offcanvas offcanvas-start " data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+      id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+      <div class="offcanvas-header">
+        <h1 class="offcanvas-title" id="offcanvasScrollingLabel"><strong>FILTRE</strong></h1>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div><br>
-        <button type="button" class="btn btn-outline-warning" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">date de publication</button>
-        <div class="dropdown-menu">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
-              Derniere 24 heures
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-            <label class="form-check-label" for="flexRadioDefault2">
-              la semaine derniere
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-            <label class="form-check-label" for="flexRadioDefault2">
-              le mois dernier
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-            <label class="form-check-label" for="flexRadioDefault2">
-              Pas de limite de temps
-            </label>
-          </div>
+      <div class="offcanvas-body">
+        <form action="">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-12">
+                <div class="input-group">
+                  <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </div>
+              </div>
+            </div>
+            <br><br>
+            <div class="row">
+
+              <div class="col-12">
+                <div class="accordion" id="accordionExample">
 
 
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Specialite
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <select class="form-select" name="specialite" id="specialite">
+                          <option value="Histoire-géographie, géopolitique et sciences politiques">Histoire-géographie,
+                            géopolitique et sciences politiques</option>
+                          <option value="Humanités, littérature et philosophie">Humanités, littérature et philosophie
+                          </option>
+                          <option value="Langues, littératures et cultures étrangères">Langues, littératures et cultures
+                            étrangères</option>
+                          <option value="Littérature et LCA (langues et cultures de l’Antiquité)">Littérature et LCA
+                            (langues et cultures de l’Antiquité)</option>
+                          <option value="Mathématiques">Mathématiques</option>
+                          <option value="Numérique et sciences informatiques">Numérique et sciences informatiques
+                          </option>
+                          <option value="Physique-chimie">Physique-chimie</option>
+                          <option value="SVT (Sciences de la Vie et de la Terre)">SVT (Sciences de la Vie et de la
+                            Terre)
+                          </option>
+                          <option value="Sciences de l’ingénieur">Sciences de l’ingénieur</option>
+                          <option value="SES (Sciences Économiques et Sociales)">SES (Sciences Économiques et Sociales)
+                          </option>
+                          <option value="Arts">Arts</option>
+                          <option value="Biologie-écologie (lycées agricoles seuls)">Biologie-écologie (lycées agricoles
+                            seuls)</option>
+                          <option value="EPS">EPS</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
 
-        </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Niveau d'etude
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <select class="form-select" name="niveau-etude" id="niveau-etude">
+                          <option value="sans-baccalauréat">sans-baccalauréat</option>
+                          <option value="baccalauréat">baccalauréat
+                          </option>
+                          <option value="baccalauréat+(1-2)">baccalauréat+(1-2)</option>
+                          <option value="licence">licence</option>
+                          <option value="mastére">mastére</option>
+                          <option value="ingénieur">ingénieur</option>
+
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Etablissement
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="search" placeholder="Etablissement"
+                            aria-label="Etablissement">
+                          <button class="btn btn-outline-success" type="submit">Search</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Nom de sociéte
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="search" placeholder="nom-societe" aria-label="nom-societe">
+                          <button class="btn btn-outline-success" type="submit">Search</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        type de sociéte
+                      </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="search" placeholder="type-societe"
+                            aria-label="type-societe">
+                          <button class="btn btn-outline-success" type="submit">Search</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        date de publication
+                      </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="date" placeholder="date_publication"
+                            aria-label="date_publication">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <br><br><br>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
-      <br>
-      <div>
-        <button type="button" class="btn btn-outline-warning" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">Niveau de l'emplyee</button>
-        <div class="dropdown-menu">
-
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              Bac
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              Licence
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              Master
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-              Ingénierie
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-            <label class="form-check-label" for="flexRadioDefault2">
-              CAP
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-            <label class="form-check-label" for="flexRadioDefault2">
-              BTS
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-            <label class="form-check-label" for="flexRadioDefault2">
-              BTP
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
-              autres
-            </label>
-          </div>
-        </div><br><br>
-        <div>
-
-          <button type="button" class="btn btn-outline-warning" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Type de travail</button>
-          <div class="dropdown-menu">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Travail temporaire
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Alternant
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Benevole
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                autres
-              </label>
-            </div>
-          </div>
-
-        </div> <br>
-        <div>
-          <button type="button" class="btn btn-outline-warning" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Temps de travail</button>
-          <div class="dropdown-menu">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Temps partiel
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              <label class="form-check-label" for="flexRadioDefault1">
-                Temps plein
-              </label>
-            </div>
-          </div>
-        </div> <br>
-        <div>
-          <button type="button" class="btn btn-outline-warning" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Secteur</button>
-          <div class="dropdown-menu">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Les industries manufacturières
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Services informatiques
-              </label>
-
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Les communications
-              </label>
-            </div>
-
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Transport
-              </label>
-            </div>
-
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Education et enseignement
-
-              </label>
-            </div>
-
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Santé
-              </label>
-            </div>
-
-
-
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Formation professionnelle
-              </label>
-            </div>
-
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Activités de production et d’industries culturelles
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Animation des jeunes, les loisirs l'encadrement de l'enfance et la protection des personnes âgées
-              </label>
-
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Protection de l'environnement
-              </label>
-
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Travaux publics
-              </label>
-
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Promotion immobilière
-              </label>
-
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Services d'études, de conseils, d'expertises et d'assistance
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Services de recherche- développement
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Autres services
-              </label>
-            </div>
-
-          </div>
-        </div> <br>
-      </div>
-
-
     </div>
   </div>
+
+
+</div>

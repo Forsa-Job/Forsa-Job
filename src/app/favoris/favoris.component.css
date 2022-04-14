@@ -2,3 +2,32 @@ img{
     height: 100%;
     width: auto;
 }
+.dropdown
+{
+    line-height: 12px;
+    margin-top: 1px;
+    margin-right: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.dropdown-menu
+{
+    max-width: fit-content;
+}
+
+#optionsdropdown
+{
+    background: none;
+    box-shadow: none;
+}
+
+.card
+{
+    width: 100%;
+}
+.date
+{
+    margin-top: 10px;
+}
