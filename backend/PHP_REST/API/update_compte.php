@@ -13,7 +13,7 @@
     if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 
         if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
-            header("Access-Control-Allow-Methods: GET, POST, OPTIONS");         
+            header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT");         
 
         if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
             header("Access-Control-Allow-Headers:        {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
@@ -46,15 +46,15 @@
     $post->tel_mobile = $data->tel_mobile;
     $post->tel_fixe = $data->tel_fixe;
 
-    if($post->create())
+    if($post->update())
     {
         echo json_encode(
-            array('message' => 'account created')
+            array('message' => 'account updated')
         );
     }
     else
     {
         echo json_encode(
-            array('message' => 'account Not Created')
+            array('message' => 'account Not updated')
         );
     }

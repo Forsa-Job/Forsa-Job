@@ -157,4 +157,65 @@
             return false;
 
         }
+
+        public function update()
+        {
+            $query = 'UPDATE ' . $this->Table_compte . 
+            '
+            SET 
+                username = :username,
+                nom = :nom,
+                prenom = :prenom,
+                email = :email,
+                password = :password,
+                date_naissance = :date_naissance,
+                pays = :pays,
+                sexe = :sexe,
+                adresse = :adresse,
+                code_postal = :code_postal,
+                tel_mobile = :tel_mobile,
+                tel_fixe = :tel_fixe
+            
+            WHERE 
+                username = :username;
+            ';
+
+            $stmt = $this->conn->prepare($query);
+
+            $this->username = htmlspecialchars(strip_tags($this->username));
+            $this->nom = htmlspecialchars(strip_tags($this->nom));
+            $this->prenom = htmlspecialchars(strip_tags($this->prenom));
+            $this->email = htmlspecialchars(strip_tags($this->email));
+            $this->password = htmlspecialchars(strip_tags($this->password));
+            $this->date_naissance = htmlspecialchars(strip_tags($this->date_naissance));
+            $this->pays = htmlspecialchars(strip_tags($this->pays));
+            $this->sexe = htmlspecialchars(strip_tags($this->sexe));
+            $this->adresse = htmlspecialchars(strip_tags($this->adresse));
+            $this->code_postal = htmlspecialchars(strip_tags($this->code_postal));
+            $this->tel_mobile = htmlspecialchars(strip_tags($this->tel_mobile));
+            $this->tel_fixe = htmlspecialchars(strip_tags($this->tel_fixe));
+
+            $stmt->bindParam(':username', $this->username);
+            $stmt->bindParam(':nom', $this->nom);
+            $stmt->bindParam(':prenom', $this->prenom);
+            $stmt->bindParam(':email', $this->email);
+            $stmt->bindParam(':password', $this->password);
+            $stmt->bindParam(':date_naissance', $this->date_naissance);
+            $stmt->bindParam(':pays', $this->pays);
+            $stmt->bindParam(':sexe', $this->sexe);
+            $stmt->bindParam(':adresse', $this->adresse);
+            $stmt->bindParam(':code_postal', $this->code_postal);
+            $stmt->bindParam(':tel_mobile', $this->tel_mobile);
+            $stmt->bindParam(':tel_fixe', $this->tel_fixe);
+
+
+            if($stmt->execute())
+            {
+                return true;
+            }
+
+            printf("Error: %s.\n", $stmt->error);
+            return false;
+
+        }
     }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterService } from '../service/register.service';
 
 @Component({
   selector: 'app-register',
@@ -7,17 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() {
+  constructor(private registerService:RegisterService) {
     this.getcountrycode()
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
   codes: any;
   theme: any;
   getcountrycode() {
     fetch("/assets/number.json").then(res => {
         var data = res.json().then(data => {
           this.codes = data
+          
+          
         })
       })
       .catch(() => {
@@ -415,6 +419,47 @@ else
     } else {
       id.className = "white"
     }
+
+  }
+
+  onsubmit(event:Event)
+  {
+    var nom=<HTMLInputElement>document.getElementById("nom")
+    var prenom=<HTMLInputElement>document.getElementById("prenom")
+    var email=<HTMLInputElement>document.getElementById("email")
+    var password=<HTMLInputElement>document.getElementById("password")
+    var adresse=<HTMLInputElement>document.getElementById("adresse")
+    var codepostale=<HTMLInputElement>document.getElementById("codepostale")
+    var pays=<HTMLInputElement>document.getElementById("pays")
+    var tel1=<HTMLInputElement>document.getElementById("tel1")
+    var tel=<HTMLInputElement>document.getElementById("tel")
+    var date_nes=<HTMLInputElement>document.getElementById("date_nes")
+
+    var ob={"username":nom.value+prenom.value+Math.floor(Math.random()*100),
+    "nom":nom.value,
+    "prenom":prenom.value,
+    "email":email.value,
+    "password":password.value,
+    "date_naissance":date_nes.value,
+    "sexe":"homme",
+    "pays":pays.value,
+    "adresse":adresse.value,
+    "code_postal":codepostale.value,
+    "tel_mobile":tel1.value,
+    "tel_fixe":tel.value}
+
+    var response:any
+    this.registerService.register(ob).subscribe(res => {
+      response=res
+      if(response.message=="account created")
+      {
+        alert("account created")
+      }
+      else
+      {
+        alert("erreur")
+      }
+    })
 
   }
 
