@@ -1,6 +1,4 @@
-import {
-  PosteService
-} from './../poste.service';
+
 import {
   Component,
   OnInit
@@ -11,6 +9,9 @@ import {
 import {
   SharedService
 } from 'src/app/Home/shared.service';
+import { CreateService } from './services/create.service';
+import { ReadService } from './services/read.service';
+import { ProfilReadService } from 'src/app/profil/service/profil-read.service';
 
 
 @Component({
@@ -22,7 +23,7 @@ export class PostesComponent implements OnInit {
   postes: any
   TabPostes: any
   clickEventSubscription: Subscription;
-  constructor(private sharedservice: SharedService, private posteService: PosteService) {
+  constructor(private readPost:ReadService, private profilRead:ProfilReadService, private creatService:CreateService, private readService:ReadService, private sharedservice: SharedService) {
     this.clickEventSubscription = this.sharedservice.getClickEventAdd().subscribe(() => {
       this.addposte()
 
@@ -73,7 +74,7 @@ export class PostesComponent implements OnInit {
     // }).catch(() => {
     //   alert("error")
     // })
-    this.posteService.getPoste().subscribe(res => {
+    this.readPost.read().subscribe(res => {
       this.postes = res.data;
       console.log(this.postes);})
 
@@ -91,12 +92,9 @@ export class PostesComponent implements OnInit {
     //   alert("error")
     // })
 
-    this.posteService.getPoste().subscribe(res => {
+    this.readPost.read().subscribe(res => {
       this.postes = res.data;
-      console.log(this.postes);
-
-
-    })
+      console.log(this.postes);})
   }
   addposte() {
     var postes = < HTMLDivElement > document.getElementById("postes");

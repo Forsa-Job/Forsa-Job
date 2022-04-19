@@ -5,12 +5,12 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CreateService {
+export class ReadService {
 
   constructor(private httpClient:HttpClient) { }
 
-  create(ob:any):Observable<any>
+  read(username:any):Observable<any>
   {
-    return this.httpClient.post('http://localhost/backend/PHP_REST/API/create_poste.php',ob)
+    return this.httpClient.get('http://localhost/backend/PHP_REST/API/read_single_poste.php?username='+username)
   }
 }

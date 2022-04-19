@@ -20,12 +20,12 @@
     
 
     include_once '../Config/Database.php';
-    include_once '../Models/EMPLOYEUR.php';
+    include_once '../Models/POSTES.php';
 
     $database = new Database();
     $db = $database->connect();
 
-    $post = new Employeur($db);
+    $post = new Postes($db);
 
     $result = $post->read();
 
@@ -33,38 +33,30 @@
 
     if($num > 0)
     {
-        $employeurs_arr = array();
-        $employeurs_arr['data'] = array();
+        $postes_arr = array();
+        $postes_arr['data'] = array();
         
         while($row = $result->fetch(PDO::FETCH_ASSOC))
         {
             extract($row);
 
-            $employeur_item = array(
+            $poste_item = array(
                 'username' => $username,
                 'nom' => $nom,
                 'prenom' => $prenom,
-                'email' => $email,
-                'password' => $password,
-                'date_naissance' => $date_naissance,
-                'sexe' => $sexe,
-                'pays' => $pays,
-                'adresse' => $adresse,
-                'code_postal' => $code_postal,
-                'tel_mobile' => $tel_mobile,
-                'tel_fixe' => $tel_fixe,
-                'nom_societe' => $nom_societe,
-                'type_societe' => $type_societe,
-                'adresse_societe' => $adresse_societe,
+                'specialite' => $specialite,
+                'niveau_etude' => $niveau_etude,
+                'date_publication' => $date_publication,
+                'description' => $description,
                 
             );
             
-            array_push($employeurs_arr['data'],$employeur_item);
+            array_push($postes_arr['data'],$poste_item);
         }
 
-        echo json_encode($employeurs_arr);
+        echo json_encode($postes_arr);
     }
     else
     {
-        echo json_encode(array('message' => 'No employeur Found'));
+        echo json_encode(array('message' => 'No Poste Found'));
     }
